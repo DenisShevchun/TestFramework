@@ -12,8 +12,5 @@ public class TestFoxtrot extends TestInit {
         HomePageFoxtrot homePageFoxtrot = new HomePageFoxtrot(driver);
         openUrl("https://www.foxtrot.com.ua/");
         homePageFoxtrot.getSearch().sendKeys("Холодильник\n");
-        homePageFoxtrot.getSearch().sendKeys("ХоЛоДильНик\n");
-        homePageFoxtrot.getSearch().sendKeys("Холодильник%\n");
-        homePageFoxtrot.getSearch().sendKeys("Холдильник\n");
     }
 }
