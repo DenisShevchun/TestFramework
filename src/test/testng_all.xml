@@ -4,6 +4,10 @@
     <test name="Allo">
         <packages>
             <package name="denisFoxtrotTest.searchTest"/>
+            <package name="denisFoxtrotTest.cartTest"/>
+            <package name="denisFoxtrotTest.footerTest"/>
+            <package name="denisFoxtrotTest.headerTest"/>
+            <package name="denisFoxtrotTest.sortingTest"/>
         </packages>
     </test>
 </suite>
