@@ -3,11 +3,7 @@
 <suite name="TestAllSuite" parallel="methods" thread-count="1">
     <test name="Allo">
         <packages>
-            <package name="denisFoxtrotTest.searchTest"/>
-            <package name="denisFoxtrotTest.cartTest"/>
-            <package name="denisFoxtrotTest.footerTest"/>
-            <package name="denisFoxtrotTest.headerTest"/>
-            <package name="denisFoxtrotTest.sortingTest"/>
+            <package name="testOLX.testClasses"/>
         </packages>
     </test>
 </suite>
