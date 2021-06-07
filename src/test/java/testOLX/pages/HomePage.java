@@ -52,6 +52,6 @@ public class HomePage extends BasePage {
     }
 
     public WebElement favorite() {
-        return findElementByXpath("//a [@id='observed-search-link']");
+        return findElementByXpath("//i [@data-icon='star']");
     }
 }

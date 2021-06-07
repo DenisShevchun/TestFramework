@@ -27,7 +27,6 @@ public class TestSearch extends TestInit {
     }
 
     void productCheck() throws AWTException {
-        HomePage homePage = new HomePage(driver);
         ProductPage productPage = new ProductPage(driver);
         Random rand = new Random();
         int upperbound = 4;
