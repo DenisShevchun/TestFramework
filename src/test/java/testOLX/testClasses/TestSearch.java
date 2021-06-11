@@ -27,6 +27,7 @@ public class TestSearch extends TestInit {
     }
 
     void productCheck() throws AWTException {
+        HomePage homePage = new HomePage(driver);
         ProductPage productPage = new ProductPage(driver);
         Random rand = new Random();
         int upperbound = 4;
@@ -39,10 +40,12 @@ public class TestSearch extends TestInit {
         if (productPage.path().getText().contains("Холодильники")) {
             System.out.println("Required product was found.");
             driver.navigate().back();
+            robot.mouseWheel(-100);
             productPage.clearSearch().click();
         } else {
             System.out.println("There's a conflict.");
             driver.navigate().back();
+            robot.mouseWheel(-100);
             productPage.clearSearch().click();
         }
     }
