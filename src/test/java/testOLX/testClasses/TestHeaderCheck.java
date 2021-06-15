@@ -1,10 +1,17 @@
 package testOLX.testClasses;
 
 import ClasesToAllUs.TestInit;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import testOLX.pages.HomePage;
 import org.testng.annotations.Test;
 
-public class TestHeaderCheck extends TestInit {
+import java.util.concurrent.TimeUnit;
+
+public class TestHeaderCheck extends TestInit implements Wait {
 
     @Test
     public void header() {
@@ -30,5 +37,16 @@ public class TestHeaderCheck extends TestInit {
             System.out.println("'Add new post' button is displayed.");
             homePage.newPost().click();
         }
+    }
+
+    @Override
+    public void wait(int sec) {
+        driver.manage().timeouts().pageLoadTimeout(sec, TimeUnit.SECONDS);
+    }
+
+    @Override
+    public WebElement waitTillElementClickable(String locator) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
 }
