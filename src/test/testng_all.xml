@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestAllSuite" parallel="methods" thread-count="1">
-    <test name="Allo">
+    <test name="Test">
         <packages>
-            <package name="testOLX.testClasses"/>
+            <package name="testRozetkaDenis.testClasses"/>
         </packages>
     </test>
 </suite>
