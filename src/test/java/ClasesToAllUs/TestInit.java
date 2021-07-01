@@ -1,6 +1,5 @@
 package ClasesToAllUs;
 
-import RozetkaSergey.RozetkaPages.RozetkaPages5_34;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -45,13 +44,6 @@ public class TestInit {
     public boolean isElementPresent(String locator){
         List<WebElement> elements = driver.findElements(By.xpath(locator));
         return elements.size() > 0;
-    }
-
-    public void closeAdIfExist() {
-        RozetkaPages5_34 rozetkaPages5_34 = new RozetkaPages5_34(driver);
-        if (isElementPresent(rozetkaPages5_34.closeAdvertisementLocator)){
-            rozetkaPages5_34.closeAdvertisement().click();
-        }
     }
 
     private void setProperty(String path) {
