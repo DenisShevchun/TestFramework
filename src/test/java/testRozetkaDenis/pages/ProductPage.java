@@ -1,11 +1,10 @@
 package testRozetkaDenis.pages;
 
 import ClasesToAllUs.BasePage;
-import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.lang.ref.WeakReference;
 import java.util.List;
 
 public class ProductPage extends BasePage {
@@ -19,7 +18,7 @@ public class ProductPage extends BasePage {
 
 
     public List<WebElement> addToCart() {
-        return findElementsByXpath("//button [@class='buy-button goods-tile__buy-button ng-star-inserted']");
+        return findElementsByXpath("//app-buy-button");
     }
 
     public WebElement modalWindowClose() {
@@ -34,11 +33,20 @@ public class ProductPage extends BasePage {
         return findElementByXpath("//button [@class='button button--medium button--with-icon button--link context-menu-actions__button']");
     }
 
-    public WebElement removeAd() {
+    public WebElement nextPage() {
+        return findElementByXpath("//a [@class='button button_color_gray button_size_medium pagination__direction pagination__direction_type_forward ng-star-inserted']");
+    }
+
+    public WebElement disableAd() {
         return findElementByXpath("//span [@class='exponea-close-cross']");
     }
 
-    public WebElement nextPage() {
-        return findElementByXpath("//a [@class='button button_color_gray button_size_medium pagination__direction pagination__direction_type_forward ng-star-inserted']");
+    public HeaderPage headerPageFunctions() {
+        return new HeaderPage(driver);
+    }
+
+    public CharSequence openNewTab() {
+        String openTab;
+        return openTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
     }
 }
